@@ -25,7 +25,7 @@ public class WebController {
 		} catch (Exception e) {
 			SampleResponse response = new SampleResponse();
 			response.setId(1);		
-			response.setMessage("Please repeat, I'm not a baby anymore but still didn't understand you");
+			response.setMessage("Please repeat, I'm not a baby anymore but I still didn't understand you");
 			
 			return response;
 		}
