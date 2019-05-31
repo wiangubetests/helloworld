@@ -8,34 +8,26 @@ import com.wiangube.helloworld.models.SampleResponse;
 @RestController
 public class WebController {
 
-	@RequestMapping("/baby")
-	public SampleResponse baby(@RequestParam(value = "word", defaultValue = "") String word) {
+	@RequestMapping("/school")
+	public SampleResponse baby(@RequestParam(value = "city", defaultValue = "") String schoolName) {
 		try {
 			SampleResponse response = new SampleResponse();
 			response.setId(1);
 			
-			if(word != "" & !word.isEmpty()) {
-				response.setMessage("mmm? (don't understand what '"+ word +"' is");
+			if(schoolName != "" & !schoolName.isEmpty()) {
+				response.setMessage("Studying in " + schoolName);
 			}
 			else {
-				response.setMessage("mmm");
+				response.setMessage("In case you were wondering, I studied 'ABC School'");
 			}			
 			
 			return response;
 		} catch (Exception e) {
 			SampleResponse response = new SampleResponse();
 			response.setId(1);		
-			response.setMessage("mmm? (don't understand you, I'm just a baby, remember?");
+			response.setMessage("Please repeat, I'm not a baby anymore but still didn't understand you");
 			
 			return response;
 		}
-	}
-
-	@RequestMapping("/sample")
-	public SampleResponse Sample(@RequestParam(value = "name", defaultValue = "Robot") String name) {
-		SampleResponse response = new SampleResponse();
-		response.setId(1);
-		response.setMessage("Your name is" + name);
-		return response;
 	}
 }

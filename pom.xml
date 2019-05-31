@@ -12,7 +12,8 @@
 	<artifactId>wiangube-hello-world</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>wiangube-hello-world</name>
-	<description>Born to the world!</description>
+	<description>School days</description>
+	<packaging>jar</packaging>	
 
 	<properties>
 		<java.version>1.8</java.version>
