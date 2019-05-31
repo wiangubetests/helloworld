@@ -18,7 +18,7 @@ public class WebController {
 				response.setMessage("Studying in " + schoolName);
 			}
 			else {
-				response.setMessage("In case you were wondering, I studied 'ABC School'");
+				response.setMessage("In case you were wondering, I studied at 'ABC School'");
 			}			
 			
 			return response;
