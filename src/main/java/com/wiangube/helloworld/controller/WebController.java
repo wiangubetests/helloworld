@@ -31,4 +31,28 @@ public class WebController {
 			return response;
 		}
 	}
+
+	@RequestMapping("/mother")
+	public SampleResponse mother(@RequestParam(value = "name", defaultValue = "") String motherName) {
+		try {
+			SampleResponse response = new SampleResponse();
+			response.setId(1);
+			
+			if(motherName != "" & !motherName.isEmpty()) {
+				response.setMessage("My mother name is " + motherName);
+			}
+			else {
+				response.setMessage("In case you were wondering, my mother's name is Olga Bernal Murillo");
+			}			
+			
+			return response;
+			
+		} catch (Exception e) {
+			SampleResponse response = new SampleResponse();
+			response.setId(1);		
+			response.setMessage("Please repeat, I'm not a baby anymore but I still didn't understand you");
+			
+			return response;
+		}
+	}
 }
